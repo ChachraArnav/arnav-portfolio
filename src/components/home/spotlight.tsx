@@ -17,7 +17,10 @@ export function Spotlight() {
         <div className="grid gap-6 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
             <p className="text-sm text-subtle">Latest build</p>
-            <h2 id="spotlight-title" className="mt-3 text-4xl font-semibold tracking-tight text-text md:text-6xl">
+            <h2
+              id="spotlight-title"
+              className="mt-3 text-4xl font-semibold tracking-tight text-text md:text-6xl"
+            >
               An interviewer that lives in your browser.
             </h2>
           </div>
@@ -30,23 +33,28 @@ export function Spotlight() {
 
         <div className="spotlight-stage mt-12 md:mt-16">
           <div className="spotlight-frame overflow-hidden rounded-[var(--radius-panel)] border border-line-strong bg-surface shadow-2xl">
-            <div className="flex items-center gap-1.5 border-b border-line px-4 py-3" aria-hidden="true">
+            <div
+              className="flex items-center gap-1.5 border-b border-line px-4 py-3"
+              aria-hidden="true"
+            >
               <span className="size-2.5 rounded-full bg-line-strong" />
               <span className="size-2.5 rounded-full bg-line-strong" />
               <span className="size-2.5 rounded-full bg-line-strong" />
               <span className="ml-3 text-2xs text-subtle">Interview Mirror</span>
             </div>
-            <video
-              src={video.src}
-              poster={video.poster}
-              aria-label={video.label}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="spotlight-video block aspect-[16/10] w-full object-cover"
-            />
+            <div className="relative aspect-[16/10] w-full overflow-hidden">
+              <video
+                src={video.src}
+                poster={video.poster}
+                aria-label={video.label}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                className="spotlight-video absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
           </div>
         </div>
 

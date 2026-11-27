@@ -35,18 +35,23 @@ export function ProjectVisual({
 
   if (!video) return <ProjectPreview kind={project.preview} />;
 
+  // The video is absolutely positioned so its intrinsic 1280x800 size can never
+  // stretch the card. iOS Safari otherwise sizes the box from the video and the
+  // page overflows sideways.
   return (
-    <video
-      ref={ref}
-      src={video.src}
-      poster={video.poster}
-      aria-label={video.label}
-      muted
-      loop
-      playsInline
-      preload="metadata"
-      controls={reduce || controls}
-      className="h-full w-full rounded-[var(--radius-control)] object-cover"
-    />
+    <div className="relative h-full w-full overflow-hidden rounded-[var(--radius-control)]">
+      <video
+        ref={ref}
+        src={video.src}
+        poster={video.poster}
+        aria-label={video.label}
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        controls={reduce || controls}
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+    </div>
   );
 }

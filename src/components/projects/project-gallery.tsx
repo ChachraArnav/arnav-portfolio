@@ -123,7 +123,7 @@ function ProjectCard({ project, wide, index }: { project: Project; wide: boolean
     >
       <div
         className={cn(
-          "relative border-b border-line bg-bg/40 p-6",
+          "relative overflow-hidden border-b border-line bg-bg/40 p-6",
           wide
             ? "aspect-[2.3/1] md:aspect-auto md:w-1/2 md:border-r md:border-b-0 md:p-10"
             : "aspect-[2.3/1]",
@@ -140,7 +140,9 @@ function ProjectCard({ project, wide, index }: { project: Project; wide: boolean
         >
           {String(index + 1).padStart(2, "0")}
         </span>
-        <span className="absolute right-3 bottom-2 text-2xs text-subtle">Schematic</span>
+        {project.video ? null : (
+          <span className="absolute right-3 bottom-2 text-2xs text-subtle">Schematic</span>
+        )}
       </div>
       <div className={cn("flex flex-1 flex-col p-6", wide && "md:p-10")}>
         <p className="mb-3 text-xs text-subtle">
