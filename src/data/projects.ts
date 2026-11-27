@@ -700,7 +700,7 @@ export const projects: Project[] = [
         "Screen recording of Academic Decoder: loading sample networking notes, the summary and key terms, the highlighted notes, and answering and checking the quiz",
     },
     repository: { url: "https://github.com/ChachraArnav/TheAcademicDecoder" },
-    demo: { url: null, unavailableReason: "Live demo coming soon" },
+    demo: { url: "https://theacademicdecoder-meicur4a8wyrmtjn6auat5.streamlit.app" },
   },
   {
     slug: "nutritrack",
