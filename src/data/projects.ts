@@ -408,7 +408,7 @@ export const projects: Project[] = [
         "Screen recording of the MarketLens dashboard: the market overview, the data quality cross-check, the 2026 test results with the volatility comparison, risk analysis and the portfolio simulator",
     },
     repository: { url: "https://github.com/chachraarnav/MarketLens" },
-    demo: { url: null, unavailableReason: "Live demo coming soon" },
+    demo: { url: "https://marketlens-hyksezdyps2gug9taneqfk.streamlit.app" },
   },
   {
     slug: "emak-solutions",
