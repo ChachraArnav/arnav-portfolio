@@ -5,7 +5,7 @@
  * Update this file (not components) when anything about you changes.
  */
 
-const FALLBACK_SITE_URL = "https://arnavchachra.vercel.app";
+const FALLBACK_SITE_URL = "https://arnav-portfolio-sandy.vercel.app";
 
 function resolveSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim();
