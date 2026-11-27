@@ -199,7 +199,7 @@ export const projects: Project[] = [
         "Screen recording of Interview Mirror's interface: choosing a behavioural practice set, the first question, and recording an answer while the mirror's bulbs follow the microphone. Recorded with a test microphone, so the feedback report isn't shown.",
     },
     repository: { url: "https://github.com/ChachraArnav/InterviewMirror" },
-    demo: { url: null, unavailableReason: "Live demo coming soon" },
+    demo: { url: "https://interview-mirror-six.vercel.app" },
   },
   {
     slug: "marketlens",
